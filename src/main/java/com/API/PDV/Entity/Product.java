@@ -15,8 +15,44 @@ public class Product {
     @Column(length = 10,precision = 10,scale = 2,nullable = false)
     private BigDecimal price;
     @Column(nullable = false)
-    int quantity;
+    private int quantity;
 
+    public long getId() {
+        return id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public Product(String description, BigDecimal price, int quantity) {
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public Product() {
+    }
 }
 
 
